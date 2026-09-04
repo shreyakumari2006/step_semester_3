@@ -1,11 +1,5 @@
 /**
  * Question 5: The Movie Review Word Length Profiler
- * 
- * Scenario:
- * A movie-review platform's moderation tool scans newly submitted reviews and profiles the length
- * of the words used in them — reviews stuffed with unusually many very short or very long words
- * are more likely to be spam or bot-generated, so moderators want a quick word-length breakdown
- * before a review is allowed to go live.
  */
 public class Question5_MovieReviewWordLengthProfiler {
 
