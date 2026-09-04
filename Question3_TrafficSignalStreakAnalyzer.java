@@ -1,12 +1,5 @@
 /**
  * Question 3: The Traffic Signal Streak Analyzer
- * 
- * Scenario:
- * The city traffic control department logs the color shown by a signal every minute using
- * single letters — 'R' for red, 'Y' for yellow, 'G' for green. Engineers suspect a malfunctioning
- * signal at one junction might be getting "stuck" on one color for unusually long stretches.
- * They need a tool that scans a day's log and reports the longest continuous streak of the same
- * color, so they know exactly which signal to inspect first.
  */
 public class Question3_TrafficSignalStreakAnalyzer {
 
