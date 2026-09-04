@@ -2,18 +2,6 @@
  * Question 5: The Movie Review Word Length Profiler
  */
 public class Question5_MovieReviewWordLengthProfiler {
-
-    /**
-     * Splits the review into individual words, classifies each word into Short, Medium, or Long,
-     * and prints the category counts.
-     * 
-     * Classification:
-     * - Short: 1–4 letters
-     * - Medium: 5–8 letters
-     * - Long: 9+ letters
-     * 
-     * @param review The movie review text string.
-     */
     public static void classifyWordLengths(String review) {
         // Validation: Check for null or empty review
         if (review == null || review.trim().isEmpty()) {
