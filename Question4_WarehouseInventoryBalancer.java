@@ -1,11 +1,5 @@
 /**
  * Question 4: The Warehouse Inventory Balancer
- * 
- * Scenario:
- * A retail warehouse stores the same product categories across two storage sections, Section A and Section B.
- * Before the monthly stock report is generated, the inventory team wants to confirm both sections hold matching
- * total quantities (to catch data-entry mismatches) and also identify the single highest-quantity item across
- * the whole warehouse.
  */
 public class Question4_WarehouseInventoryBalancer {
 
