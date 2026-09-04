@@ -2,16 +2,7 @@ import java.util.Scanner;
 
 /**
  * Question 1: The Exam Hall Seat Duplication Checker
- * 
- * Scenario:
- * The Examination Cell manages seat allocation across a large exam hall for hundreds of students.
- * Before an exam begins, invigilators must confirm that no seat number has been assigned to two
- * different students by mistake. The system scans the full list of assigned seat numbers and flags
- * any duplicates before the exam starts.
- * 
- * Constraints:
- * - Do not use any Collections class — arrays and loops only.
- */
+**/
 public class Question1_ExamHallSeatDuplicationChecker {
 
     /**
@@ -28,9 +19,8 @@ public class Question1_ExamHallSeatDuplicationChecker {
 
         boolean duplicateFound = false;
 
-        // Compare every seat number against every other seat number using nested loops
         for (int i = 0; i < seatNumbers.length; i++) {
-            // Check if this seat number has already been processed and reported earlier
+         
             boolean alreadyProcessed = false;
             for (int k = 0; k < i; k++) {
                 if (seatNumbers[k] == seatNumbers[i]) {
@@ -53,7 +43,6 @@ public class Question1_ExamHallSeatDuplicationChecker {
             }
         }
 
-        // If no duplicates exist, print confirmation message
         if (!duplicateFound) {
             System.out.println("No Duplicate Seats Found");
         }
