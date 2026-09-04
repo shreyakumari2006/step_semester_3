@@ -2,12 +2,6 @@ import java.util.Locale;
 
 /**
  * Question 2: The Typing Speed Test Accuracy Checker
- * 
- * Scenario:
- * An online typing-practice website shows users a fixed passage and asks them to retype it as
- * quickly and accurately as they can. Once the user submits their attempt, the system compares
- * it character by character against the original passage and reports exactly how accurate the
- * attempt was — along with the position of the very first mistake.
  */
 public class Question2_TypingSpeedAccuracyChecker {
 
@@ -18,13 +12,12 @@ public class Question2_TypingSpeedAccuracyChecker {
      * @param typed    The user's typed text string.
      */
     public static void checkTypingAccuracy(String original, String typed) {
-        // Validation: Check for null inputs
         if (original == null || typed == null) {
             System.out.println("Invalid Input: Strings cannot be null.");
             return;
         }
 
-        // Validation: Check for equal length
+        
         if (original.length() != typed.length()) {
             System.out.println("Invalid Input: Original and typed strings must be of equal length.");
             return;
@@ -56,7 +49,7 @@ public class Question2_TypingSpeedAccuracyChecker {
             }
         }
 
-        // Calculate accuracy percentage
+        
         double accuracy = ((double) matchedCount / total) * 100.0;
 
         // Build output
