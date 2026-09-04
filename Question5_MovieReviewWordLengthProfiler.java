@@ -1,0 +1,67 @@
+/**
+ * Question 5: The Movie Review Word Length Profiler
+ * 
+ * Scenario:
+ * A movie-review platform's moderation tool scans newly submitted reviews and profiles the length
+ * of the words used in them — reviews stuffed with unusually many very short or very long words
+ * are more likely to be spam or bot-generated, so moderators want a quick word-length breakdown
+ * before a review is allowed to go live.
+ */
+public class Question5_MovieReviewWordLengthProfiler {
+
+    /**
+     * Splits the review into individual words, classifies each word into Short, Medium, or Long,
+     * and prints the category counts.
+     * 
+     * Classification:
+     * - Short: 1–4 letters
+     * - Medium: 5–8 letters
+     * - Long: 9+ letters
+     * 
+     * @param review The movie review text string.
+     */
+    public static void classifyWordLengths(String review) {
+        // Validation: Check for null or empty review
+        if (review == null || review.trim().isEmpty()) {
+            System.out.println("Invalid Input: Review text cannot be null or empty.");
+            return;
+        }
+
+        // Split review into individual words by whitespace
+        String[] words = review.trim().split("\\s+");
+
+        int shortCount = 0;
+        int mediumCount = 0;
+        int longCount = 0;
+
+        for (String word : words) {
+            int length = word.length();
+
+            if (length >= 1 && length <= 4) {
+                shortCount++;
+            } else if (length >= 5 && length <= 8) {
+                mediumCount++;
+            } else if (length >= 9) {
+                longCount++;
+            }
+        }
+
+        System.out.printf("Short: %d | Medium: %d | Long: %d%n", shortCount, mediumCount, longCount);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== Question 5: Movie Review Word Length Profiler ===");
+
+        // Test Case 1: Sample from assignment
+        String review1 = "This movie was absolutely fantastic and thrilling";
+        System.out.println("\nTest Case 1 Input: \"" + review1 + "\"");
+        System.out.print("Output: ");
+        classifyWordLengths(review1);
+
+        // Test Case 2: Another test review
+        String review2 = "A masterpiece with breathtaking visuals and unforgettable storytelling";
+        System.out.println("\nTest Case 2 Input: \"" + review2 + "\"");
+        System.out.print("Output: ");
+        classifyWordLengths(review2);
+    }
+}
